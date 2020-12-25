@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <nav>
-        <div className="logo">Q</div>
+        <div className="logo">Battle Of Bastards</div>
         <div className="nav-wrapper">
           <ul className="menu-area">
             <li>
@@ -17,13 +17,6 @@ const Navbar = () => {
             </li>
             <li>
               <Link to="/count">Count</Link>
-            </li>
-            <li>
-              <Link to="/Ask">Ask</Link>
-            </li>
-
-            <li>
-              <Link to="/qna">QNA</Link>
             </li>
             <li>
               <Link to="/search">Search</Link>

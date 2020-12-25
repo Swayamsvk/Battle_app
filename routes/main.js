@@ -25,6 +25,7 @@ router.route("/search").get((req, res) => {
     $or: [
       { attacker_king: { $regex: searchField, $options: "$i" } },
       { defender_king: { $regex: searchField, $options: "$i" } },
+      { location: { $regex: searchField, $options: "$i" } },
     ],
   })
     .then((main) => {

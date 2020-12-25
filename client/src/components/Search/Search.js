@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import Show from "./Show";
+import "./Search.css";
 
 const Search = (props) => {
   const [sdata, setSdata] = useState([]);
@@ -10,7 +11,6 @@ const Search = (props) => {
     setFdata(e.target.value);
   };
   const onClickHandler = () => {
-    // if (fdata != "")
     search(fdata);
   };
 
@@ -31,7 +31,8 @@ const Search = (props) => {
   };
 
   return (
-    <div>
+    <div className="container4">
+      <h3 className="subcont2">Search for a king or location</h3>
       <input
         type="text"
         placeholder="Search"
@@ -39,8 +40,17 @@ const Search = (props) => {
         onChange={(e) => onChangeHandler(e)}
         className="field"
       />
-      <input type="submit" value="Search" onClick={(c) => onClickHandler()} />
       <br />
+      <br />
+      <input
+        type="submit"
+        className="button1"
+        value="Search"
+        onClick={(c) => onClickHandler()}
+      />
+      <br />
+      <br />
+
       <div>{renderData()}</div>
     </div>
   );

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
+import "./Count.css";
 
 const Count = () => {
   const [data, setData] = useState([]);
@@ -10,10 +11,12 @@ const Count = () => {
   }, []);
 
   return (
-    <div>
-      <div className="head">Count : </div>
+    <div className="container3">
+      <div className="head subcont">Total Number Of Battles </div>
 
-      <div>{data}</div>
+      <div style={{ marginLeft: "47vw", color: "white", fontSize: "7vw" }}>
+        {data}
+      </div>
     </div>
   );
 };

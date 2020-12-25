@@ -1,0 +1,14 @@
+.container {
+  /* The image used */
+  background-image: url(./Images/project.jpeg);
+
+  width: 99.99vw;
+  height: 90vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.container::-webkit-scrollbar {
+  display: none;
+}

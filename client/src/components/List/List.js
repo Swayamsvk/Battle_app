@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import Show from "./Show";
+import "./List.css";
 
 const List = () => {
   const [data, setData] = useState([]);
@@ -17,8 +18,9 @@ const List = () => {
   };
 
   return (
-    <div>
-      <div className="head">List Of Places</div>
+    <div className="container2">
+      <div className="sub">List Of Places</div>
+      <br />
 
       <div>{dataList()}</div>
     </div>
