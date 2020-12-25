@@ -1,0 +1,16 @@
+Endpoint For List:
+
+http://localhost:5000/main/list
+
+Endpoint for Count:
+
+http://localhost:5000/main/count
+
+Endpoint For Searching kings or battles:
+
+http://localhost:5000/main/search?king=king_name or battle_name
+
+Endpoint for search in details
+
+http://localhost:5000/main/searchdetail?king=king_name&location=location_name&type=battle_type
+

@@ -2,10 +2,11 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import "./Count.css";
 
+//Count Component
 const Count = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:5000/main/count").then((response) => {
+    axios.get("/main/count").then((response) => {
       setData(response.data);
     });
   }, []);

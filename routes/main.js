@@ -15,12 +15,11 @@ router.route("/count").get((req, res) => {
     .then((main) => res.json(main))
     .catch((err) => res.status(400).json("Error:" + err));
 });
-//search for attacker or defender
+//search for attacker or defender or location
 
 router.route("/search").get((req, res) => {
   const searchField = req.query.king;
-  const searchField2 = req.query.location;
-  const searchField3 = req.query.type;
+
   Main.find({
     $or: [
       { attacker_king: { $regex: searchField, $options: "$i" } },

@@ -3,6 +3,7 @@ import axios from "axios";
 import Show from "./Show";
 import "./Search.css";
 
+//Search Component
 const Search = (props) => {
   const [sdata, setSdata] = useState([]);
   const [fdata, setFdata] = useState("");
@@ -14,14 +15,13 @@ const Search = (props) => {
     search(fdata);
   };
 
+  //search function
   const search = async (val) => {
-    const res = await axios(`http://localhost:5000/main/search?king=${val}`);
-    console.log(typeof res.data);
+    const res = await axios(`/main/search?king=${val}`);
     const searchpart = await res.data;
 
     if (fdata != "") setSdata(searchpart);
     else setSdata([]);
-    console.log(searchpart);
   };
 
   const renderData = () => {

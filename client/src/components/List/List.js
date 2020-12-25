@@ -3,10 +3,11 @@ import axios from "axios";
 import Show from "./Show";
 import "./List.css";
 
+//List Component
 const List = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:5000/main/list").then((response) => {
+    axios.get("/main/list").then((response) => {
       setData(response.data);
     });
   }, []);

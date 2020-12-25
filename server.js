@@ -19,9 +19,6 @@ connection.once("open", () => {
 });
 
 const mainRouter = require("./routes/main");
-// const usersRouter = require("./routes/users");
-
-// app.use("/exercises", exercisesRouter);
 app.use("/main", mainRouter);
 
 app.listen(port, () => {
