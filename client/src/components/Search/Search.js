@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import Show from "./Show";
 import "./Search.css";
@@ -20,7 +20,7 @@ const Search = (props) => {
     const res = await axios(`/main/search?king=${val}`);
     const searchpart = await res.data;
 
-    if (fdata != "") setSdata(searchpart);
+    if (fdata !== "") setSdata(searchpart);
     else setSdata([]);
   };
 
